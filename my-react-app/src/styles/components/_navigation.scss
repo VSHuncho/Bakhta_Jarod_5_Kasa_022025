@@ -1,0 +1,88 @@
+.navigation {
+  display: flex; 
+  justify-content: space-between; 
+  gap: 900px;
+  margin-top: 30px;
+
+  img {
+    width: 120px; 
+    height: 50px; 
+  }
+
+  ul {
+    display: flex; 
+    list-style: none; 
+    margin-top: 20px;
+
+    a {
+      text-decoration: none; 
+      color: black; 
+      margin-left: 20px; 
+
+      &.nav-active {
+        text-decoration: underline; 
+      }
+
+      li {
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          color: gray; 
+        }
+      }
+    }
+  }
+}
+
+.nav-active {
+  display: flex;
+  justify-content: flex-end;
+}
+
+// Media queries
+@media (max-width: 1240px) {
+  .navigation {
+    padding: 0 20px; /* Réduit l'espacement horizontal */
+    gap:0;
+  }
+
+  img {
+    width: 90%; /* Réduit la taille du logo */
+  }
+
+  ul a {
+    margin-left: 15px; /* Réduit l'espace entre les liens */
+  }
+}
+
+@media (max-width: 768px) {
+
+ .navigation img {
+    width: 30%; /* Réduit la taille du logo */
+    height: 40px;
+  }
+
+  
+  .navigation {
+    flex-direction: flex; /* Passe en colonne pour mobile */
+    justify-content: space-between;
+    height: auto; /* Ajuste la hauteur automatiquement */
+    padding: 10px 20px; /* Ajoute de l'espace autour du logo et des liens */
+    gap: 0;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    a {
+      margin-left: 0; /* Supprime l'espacement horizontal */
+      margin-bottom: 10px; /* Ajoute de l'espace vertical entre les liens */
+    }
+  }
+
+  img {
+    margin-bottom: 10px; /* Ajoute de l'espace entre le logo et les liens */
+    width: 80px; /* Réduit davantage la taille du logo */
+  }
+}
